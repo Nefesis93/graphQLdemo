@@ -1,4 +1,4 @@
-package com.example.grah_ql_demo.enumeration;
+package com.example.graph_ql_demo.enumeration;
 
 public enum RuoloEnum {
     ADMIN,

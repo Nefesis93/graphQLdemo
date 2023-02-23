@@ -1,4 +1,4 @@
-package com.example.grah_ql_demo.entity;
+package com.example.graph_ql_demo.entity;
 
 import lombok.*;
 

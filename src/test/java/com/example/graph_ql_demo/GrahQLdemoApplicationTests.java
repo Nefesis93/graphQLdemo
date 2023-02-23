@@ -1,4 +1,4 @@
-package com.example.grah_ql_demo;
+package com.example.graph_ql_demo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.example.grah_ql_demo.entity;
+package com.example.graph_ql_demo.entity;
 
-import com.example.grah_ql_demo.enumeration.RuoloEnum;
+import com.example.graph_ql_demo.enumeration.RuoloEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

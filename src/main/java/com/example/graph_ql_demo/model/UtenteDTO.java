@@ -1,4 +1,4 @@
-package com.example.grah_ql_demo.model;
+package com.example.graph_ql_demo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

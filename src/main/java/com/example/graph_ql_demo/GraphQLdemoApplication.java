@@ -1,13 +1,13 @@
-package com.example.grah_ql_demo;
+package com.example.graph_ql_demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrahQLdemoApplication {
+public class GraphQLdemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GrahQLdemoApplication.class, args);
+		SpringApplication.run(GraphQLdemoApplication.class, args);
 	}
 
 }
