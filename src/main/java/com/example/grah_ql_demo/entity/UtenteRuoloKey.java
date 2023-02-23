@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
+@Builder
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +17,6 @@ public class UtenteRuoloKey implements Serializable {
 
     @Column(name = "matricola")
     private String matricola;
-
 
     @Column(name = "id_ruolo")
     private Long idRuolo;

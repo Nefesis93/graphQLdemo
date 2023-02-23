@@ -1,12 +1,12 @@
 package com.example.grah_ql_demo.entity;
 
-
 import lombok.*;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
+@Builder
 @EqualsAndHashCode
 @AllArgsConstructor
 @NoArgsConstructor

@@ -15,10 +15,17 @@ public class TestController {
     private GenericMapper<UtenteEntity, UtenteDTO> utenteMapper;
 
     @GetMapping("/utente")
-    public ResponseEntity<Void> getUtente(@RequestParam String matricola) {
+    public ResponseEntity<UtenteDTO> getUtente(@RequestParam String matricola) {
 
-        System.out.println();
+        UtenteDTO utente = utenteMapper.entityToModel(UtenteEntity.builder()
+                .matricola(matricola)
+                .nome(matricola)
+                .cognome(matricola)
+                .email(matricola)
+                .build());
 
-        return ResponseEntity.ok(null);
+        System.out.println(utente);
+
+        return ResponseEntity.ok(utente);
     }
 }

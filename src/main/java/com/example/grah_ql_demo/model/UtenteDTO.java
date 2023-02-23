@@ -1,18 +1,19 @@
 package com.example.grah_ql_demo.model;
 
-import com.example.grah_ql_demo.entity.UtenteRuoloEntity;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.OneToMany;
-import java.util.List;
-
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class UtenteDTO {
     private String matricola;
-
     private String nome;
-
     private String cognome;
-
     private String email;
-
 }
