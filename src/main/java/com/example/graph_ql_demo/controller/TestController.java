@@ -28,8 +28,6 @@ public class TestController {
                 .email(email)
                 .build());
 
-        System.out.println(utente);
-
         return ResponseEntity.ok(utente);
     }
 }
