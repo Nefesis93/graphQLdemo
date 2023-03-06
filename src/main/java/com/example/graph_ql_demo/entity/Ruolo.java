@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "ruolo")
-public class RuoloEntity {
+public class Ruolo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

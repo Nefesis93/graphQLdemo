@@ -1,0 +1,5 @@
+#root
+type Query {
+    ruoli: [Ruolo]!
+    ruolo(id: ID!): Ruolo
+}

@@ -19,10 +19,10 @@ public class UtenteRuoloEntity {
     @ManyToOne
     @MapsId("idRuolo")
     @JoinColumn(name = "id_ruolo")
-    private RuoloEntity ruolo;
+    private Ruolo ruolo;
 
     @ManyToOne
     @MapsId("matricola")
     @JoinColumn(name = "matricola")
-    private UtenteEntity utente;
+    private Utente utente;
 }

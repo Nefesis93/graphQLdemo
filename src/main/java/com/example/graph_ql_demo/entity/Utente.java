@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "utente")
-public class UtenteEntity {
+public class Utente {
 
     @Id
     private String matricola;
