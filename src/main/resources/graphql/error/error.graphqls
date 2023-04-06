@@ -1,0 +1,5 @@
+interface Error {
+    statusCode: Int!
+    status: String!
+    errorMessage: String!
+}

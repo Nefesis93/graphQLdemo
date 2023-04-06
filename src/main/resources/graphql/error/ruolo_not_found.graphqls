@@ -1,8 +1,0 @@
-type RuoloNotFound implements Error {
-    statusCode: Int!
-    status: String!
-    error: String!
-    message: String!
-}
-
-union RuoloResponse = Ruolo | RuoloNotFound

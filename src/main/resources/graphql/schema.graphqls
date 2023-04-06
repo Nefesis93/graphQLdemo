@@ -1,5 +1,14 @@
 #root
 type Query {
-    ruoli: [Ruolo]!
-    ruolo(id: ID!): Ruolo
+    #RuoloController
+    getAllRuoli: [Ruolo]!
+    getRuolo(roleEnum: RuoloEnum): Ruolo!
+
+    #UtenteController
+    getUtente(matricola: String): UtenteNotFoundUnion!
+}
+
+type Mutation {
+    #UtenteController
+    insertUtente(utente: UtenteInput): UtenteExistsUnion!
 }

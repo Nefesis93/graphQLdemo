@@ -1,0 +1,5 @@
+type NotFound implements Error {
+    statusCode: Int!
+    status: String!
+    errorMessage: String!
+}

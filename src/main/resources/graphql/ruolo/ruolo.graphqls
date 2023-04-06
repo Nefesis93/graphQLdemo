@@ -1,4 +1,7 @@
 type Ruolo {
-    id: ID!
+    nome: RuoloEnum!
+}
+
+input RuoloInput {
     nome: RuoloEnum!
 }

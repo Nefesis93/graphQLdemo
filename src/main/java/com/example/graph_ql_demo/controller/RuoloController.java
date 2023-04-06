@@ -1,9 +1,10 @@
 package com.example.graph_ql_demo.controller;
 
 
-import com.example.graph_ql_demo.entity.Ruolo;
-import com.example.graph_ql_demo.exception.RuoloNotFoundException;
-import com.example.graph_ql_demo.rerepository.RuoloRepository;
+import com.example.graph_ql_demo.dto.RuoloDTO;
+import com.example.graph_ql_demo.enumeration.RuoloEnum;
+import com.example.graph_ql_demo.mapper.RuoloMapper;
+import com.example.graph_ql_demo.service.RuoloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
@@ -17,13 +18,15 @@ import java.util.List;
 public class RuoloController {
 
     @Autowired
-    private RuoloRepository repository;
+    private RuoloService service;
 
     @QueryMapping
-    public List<Ruolo> ruoli() {
-        return repository.findAll();
+    public List<RuoloDTO> getAllRuoli() {
+        return service.findAll();
     }
 
     @QueryMapping
-    public Object ruolo(@Argument Long id) { return repository.findById(id).orElseThrow(RuoloNotFoundException::new); }
+    public RuoloDTO getRuolo(@Argument RuoloEnum roleEnum) {
+        return service.findByNome(roleEnum);
+    }
 }

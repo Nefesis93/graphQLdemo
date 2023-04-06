@@ -1,0 +1,19 @@
+type Utente {
+    uuid: ID!
+    matricola: String!
+    nome: String!
+    cognome: String!
+    email: String!
+    ruoli: [Ruolo]
+}
+
+input UtenteInput {
+    matricola: String!
+    nome: String!
+    cognome: String!
+    email: String!
+    ruoli: [RuoloInput]!
+}
+
+union UtenteNotFoundUnion = Utente | NotFound
+union UtenteExistsUnion = Utente | Exists

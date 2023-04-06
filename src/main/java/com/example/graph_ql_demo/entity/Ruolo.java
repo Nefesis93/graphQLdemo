@@ -1,20 +1,18 @@
 package com.example.graph_ql_demo.entity;
 
 import com.example.graph_ql_demo.enumeration.RuoloEnum;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity(name = "ruolo")
 public class Ruolo {
 
@@ -22,9 +20,15 @@ public class Ruolo {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    @EqualsAndHashCode.Include
     @Enumerated(EnumType.STRING)
     private RuoloEnum nome;
 
-    @OneToMany(mappedBy = "utente")
-    List<UtenteRuoloEntity> utenti;
+    @Builder.Default
+    @ManyToMany
+    @JoinTable(
+            name = "utente_ruolo",
+            joinColumns = @JoinColumn(name = "id_ruolo"),
+            inverseJoinColumns = @JoinColumn(name = "uuid_utente"))
+    Set<Utente> utenti = new HashSet<>();
 }
